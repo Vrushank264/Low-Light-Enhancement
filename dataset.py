@@ -7,7 +7,7 @@ os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
 class LoLDataset(dataset.Dataset):
     
-    def __init__(self, low_light_root, target_root, img_size = 128):
+    def __init__(self, low_light_root, target_root, img_size = 64):
         
         super().__init__()
         self.lol_fnames = [os.path.join(low_light_root, file) for file in os.listdir(low_light_root)]
