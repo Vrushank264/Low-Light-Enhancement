@@ -9,7 +9,7 @@ class CompressChannels(nn.Module):
     """
         Compresses the input channels to 2 by concatenating the results of
         Global Average Pooling(GAP) and Global Max Pooling(GMP).
-        HxWxC => HxWx1
+        HxWxC => HxWx2
 
     """
     
