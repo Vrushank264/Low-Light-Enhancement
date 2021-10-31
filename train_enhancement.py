@@ -56,7 +56,7 @@ def train(loader, model, criterion, opt, writer, step, epoch, mixup = True, devi
         writer.add_scalar("Training/Loss", epoch_loss, global_step = step)
         writer.add_scalar("Training/PSNR", epoch_psnr, global_step = step)
         
-        if idx % 25:
+        if idx % 25 == 0:
           gen_img = model(fixed_ip_train)
           writer.add_image("Observations/Train_img", gen_img.squeeze(0), global_step = step)
       
